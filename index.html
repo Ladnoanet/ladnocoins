@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТАПАТЬ ЛАДНО</title>
+    <style>
+        body {
+            background-color: rgb(13, 13, 24);
+            text-align: center;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 50%;
+            margin-top: 10px;
+            border: 5px solid rgb(255, 174, 0);
+            transition: transform 0.2s;
+        }
+
+        img:active {
+            transform: scale(0.9);
+        }
+
+        .schet {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>ТАПАЙ ТАПАЙ!</h1>
+    <h3>Тапни 10 раз!</h3>
+    <h3>1 LadnoCoin = нихуя рублей</h3>
+    <img src="Ладно.jpg" alt="" onclick="incrementCounter()">
+    <h1 class="schet" id="counter">0</h1>
+
+    <script>
+        let count = 0;
+
+        function incrementCounter() {
+            count++;
+            document.getElementById('counter').innerText = count;
+            if (count === 10) {
+                window.location.href = 'vivod.html';
+            }
+        }
+    </script>
+</body>
+</html>
